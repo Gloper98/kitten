@@ -34,6 +34,7 @@ img {
     border-radius: 50%;
     margin-top: 10%;
     margin-bottom: 10%;
+    cursor: pointer;
 }
 h1, .icon-menu {
     display: inline-block;
