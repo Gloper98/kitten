@@ -4,10 +4,31 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Kitten</title>
+        <link rel="stylesheet" href="css/grid.css">
+        <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+        <link rel="stylesheet" href="assets/icons/icomoon/style.css">
         <link rel="stylesheet" href="css/main.css">
     </head>
     <body>
-       
+      <header>
+          <nav>
+              <h1>Kitten</h1><span class="icon-menu"></span>
+          </nav>
+      </header>
+       <section class="only-section">
+           <div id="player-container" class="image-container">
+               <img class="cat" id="player1" src="assets/images/kitten-small.png" alt="cat">
+               <img class="cat" id="player2" src="assets/images/kitten-medium.png" alt="cat">
+               <img class="cat" id="player3" src="assets/images/kitten-large.png" alt="cat">
+           </div>
+       </section>
+       <div class="linear-gradient">
+        
+       </div>
+       <audio id="audio" loop="loop" data-bpm="140">
+           <source src="assets/audio/Blackbear%20-%20Idfc%20(Remix).mp3" type="audio/mp3">
+           <source src="assets/audio/Blackbear%20-%20Idfc%20(Remix).ogg" type="audio/ogg">
+       </audio>
         <script type="text/javascript" src="js/app.js"></script>
     </body>
 </html>
