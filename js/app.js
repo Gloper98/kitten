@@ -1,34 +1,34 @@
 var player = document.getElementsByClassName("cat");
 for(var i=0; i<player.length;i++){
     player[i].addEventListener("click",function animation(event) {
+        
     var audio = document.getElementById("audio");
     var playerContainer = document.getElementById("player-container");
     var bpm = audio.dataset.bpm;
     var pulse = (60/bpm)*1000;
-    if(audio.paused ===true) {
-       audio.play();
-        playerContainer.classList.add("playing");
+    var pulseReverse=858.57142857142856;
         
-        var hello = setInterval(pulseInterval,428.57142857142856);
-        
-        var hello2 = setInterval(pulseOut,858.57142857142856);
-        console.log(pulse);
-    }else {
-        
-        clearInterval(hello);
-        console.log(pulse);
+    if(audio.paused ===false) {
+        clearInterval(1);
+        clearInterval(2);
         audio.pause();
         audio.currentTime = 0;
        playerContainer.classList.remove("playing");
+        playerContainer.classList.remove("pulse");
+    playerContainer.classList.remove("antiPulse");
+    }else if(audio.paused ===true){
+        
+        audio.play();
+        playerContainer.classList.add("playing");
+        var firstInterval=setInterval(pulseInterval,pulse);
+        var secondInterval=setInterval(pulseOut,pulseReverse);
     }
-})
-
-    
+  })
 }
 
 function pulseInterval(event) {
      var playerContainer = document.getElementById("player-container");
-    playerContainer.classList.add("pulse");
+     playerContainer.classList.add("pulse");
 }
 function pulseOut(event) {
     var playerContainer = document.getElementById("player-container");
