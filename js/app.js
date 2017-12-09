@@ -14,8 +14,6 @@ for(var i=0; i<player.length;i++){
         audio.pause();
         audio.currentTime = 0;
        playerContainer.classList.remove("playing");
-        playerContainer.classList.remove("pulse");
-    playerContainer.classList.remove("antiPulse");
     }else if(audio.paused ===true){
         
         audio.play();
